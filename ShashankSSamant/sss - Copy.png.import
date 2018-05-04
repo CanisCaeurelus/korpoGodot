@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/sss - Copy.png-af4799ca9b58394cd2abdab9a9200061.stex"
+
+[deps]
+
+source_file="res://ShashankSSamant/sss - Copy.png"
+source_md5="821a258738898618dac89d0b24e1b050"
+
+dest_files=[ "res://.import/sss - Copy.png-af4799ca9b58394cd2abdab9a9200061.stex" ]
+dest_md5="3091d7b874120d3324674546c1ac1a7a"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=false
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=false
+svg/scale=1.0

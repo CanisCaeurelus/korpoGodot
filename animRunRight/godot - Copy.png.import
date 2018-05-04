@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/godot - Copy.png-9b392586060fb6d8d488612e4e5f6168.stex"
+
+[deps]
+
+source_file="res://animRunRight/godot - Copy.png"
+source_md5="3311993c3321a2dbedb36cdecf607247"
+
+dest_files=[ "res://.import/godot - Copy.png-9b392586060fb6d8d488612e4e5f6168.stex" ]
+dest_md5="2dd4b5bd65c2090e3e5eef8140d02ea8"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=false
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=false
+svg/scale=1.0

@@ -1,0 +1,244 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://KinematicBody2D.gd" type="Script" id=1]
+[ext_resource path="res://animRunRight/godot - Copy (2).png" type="Texture" id=2]
+[ext_resource path="res://animRunRight/godot - Copy.png" type="Texture" id=3]
+[ext_resource path="res://animRunRight/godot.png" type="Texture" id=4]
+[ext_resource path="res://AnimStand/godot.png" type="Texture" id=5]
+[ext_resource path="res://AnimSit/godot.png" type="Texture" id=6]
+[ext_resource path="res://icon.png" type="Texture" id=7]
+[ext_resource path="res://ShashankSSamant/sss - Copy - Copy.png" type="Texture" id=8]
+[ext_resource path="res://ShashankSSamant/sss - Copy.png" type="Texture" id=9]
+[ext_resource path="res://godot.png" type="Texture" id=10]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 2.73138, 2.52174 )
+
+[sub_resource type="SpriteFrames" id=8]
+
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "Run",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "Stand",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ) ],
+"loop": true,
+"name": "Sit",
+"speed": 5.0
+} ]
+_sections_unfolded = [ "Resource" ]
+
+[sub_resource type="RectangleShape2D" id=4]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[sub_resource type="RectangleShape2D" id=5]
+
+custom_solver_bias = 0.0
+extents = Vector2( 2.39976, 15.8926 )
+
+[sub_resource type="SpriteFrames" id=7]
+
+animations = [ {
+"frames": [ ExtResource( 8 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "default",
+"speed": 3.0
+} ]
+
+[node name="World" type="Node" index="0"]
+
+[node name="Player" type="KinematicBody2D" parent="." index="0"]
+
+position = Vector2( 440.813, 134.603 )
+scale = Vector2( 0.123593, 0.204383 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" index="0"]
+
+position = Vector2( 2.078, 1.60364 )
+scale = Vector2( 10.3591, -11.4702 )
+shape = SubResource( 1 )
+
+[node name="Stand" type="AnimatedSprite" parent="Player" index="1"]
+
+position = Vector2( -4.3634, -2.11133 )
+scale = Vector2( 11.4227, 6.49835 )
+frames = SubResource( 8 )
+animation = "Stand"
+playing = true
+_sections_unfolded = [ "Animation", "Region" ]
+
+[node name="Wall" type="StaticBody2D" parent="." index="1"]
+
+position = Vector2( 442.678, 492.315 )
+scale = Vector2( 0.306695, 3.34039 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Wall" index="0"]
+
+modulate = Color( 0, 0, 0, 1 )
+position = Vector2( -0.123749, -0.115814 )
+scale = Vector2( 1.00486, 1.00677 )
+texture = ExtResource( 7 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall" index="1"]
+
+position = Vector2( -0.0240326, -0.0892334 )
+scale = Vector2( 3.21919, 3.20454 )
+shape = SubResource( 4 )
+
+[node name="Wall3" type="StaticBody2D" parent="." index="2"]
+
+position = Vector2( 327.268, 498.868 )
+scale = Vector2( 0.306695, 3.1586 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Wall3" index="0"]
+
+modulate = Color( 0, 0, 0, 1 )
+position = Vector2( -0.123749, -0.115814 )
+scale = Vector2( 1.00486, 1.00677 )
+texture = ExtResource( 7 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall3" index="1"]
+
+position = Vector2( -0.0240326, -0.0892334 )
+scale = Vector2( 3.21919, 3.20454 )
+shape = SubResource( 4 )
+
+[node name="Wall4" type="StaticBody2D" parent="." index="3"]
+
+position = Vector2( 221.063, 494.457 )
+scale = Vector2( 1.88074, 3.13563 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Wall4" index="0"]
+
+modulate = Color( 0, 0, 0, 1 )
+position = Vector2( -0.123749, -0.115814 )
+scale = Vector2( 1.00486, 1.00677 )
+texture = ExtResource( 7 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall4" index="1"]
+
+position = Vector2( -0.0240326, -0.0892334 )
+scale = Vector2( 3.21919, 3.20454 )
+shape = SubResource( 4 )
+
+[node name="Wall2" type="StaticBody2D" parent="." index="4"]
+
+position = Vector2( 381.59, 499.208 )
+scale = Vector2( 0.281221, 3.12498 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Wall2" index="0"]
+
+modulate = Color( 0, 0, 0, 1 )
+position = Vector2( -0.123749, 0.961134 )
+scale = Vector2( 1.00486, 0.973115 )
+texture = ExtResource( 7 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall2" index="1"]
+
+position = Vector2( 0.559762, -0.971281 )
+scale = Vector2( 12.8866, 1.81554 )
+shape = SubResource( 5 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wall2" index="2"]
+
+build_mode = 0
+polygon = PoolVector2Array( 64.0281, -29.8657, 124.148, -31.9827, 182.64, -36.4997, 116.307, -22.8087, 30.0471, -29.6304 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="." index="5"]
+
+position = Vector2( 170.085, 378.44 )
+scale = Vector2( 0.269453, 0.492374 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="KinematicBody2D" index="0"]
+
+position = Vector2( 46.7097, -25.2687 )
+scale = Vector2( 7.86515, 4.23302 )
+frames = SubResource( 7 )
+animation = "default"
+playing = true
+
+[node name="Palrej" type="AnimationPlayer" parent="." index="6"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+blend_times = [  ]
+
+[node name="Sprite" type="Sprite" parent="Palrej" index="0"]
+
+position = Vector2( 218.383, 388.612 )
+texture = ExtResource( 10 )
+vframes = 7
+region_enabled = true
+region_rect = Rect2( 0, 0, 5, 9 )
+_sections_unfolded = [ "Animation", "Region" ]
+
+
